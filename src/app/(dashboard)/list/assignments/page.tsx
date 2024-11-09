@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -52,8 +53,8 @@ const AssignmentListPage = () => {
           {role === "admin" ||
             (role === "teacher" && (
               <>
-                {/* <FormModal table="assignment" type="update" data={item} />
-                <FormModal table="assignment" type="delete" id={item.id} /> */}
+                <FormModal table="assignment" type="update" data={item} />
+                <FormModal table="assignment" type="delete" id={item.id} />
               </>
             ))}
         </div>
@@ -79,8 +80,7 @@ const AssignmentListPage = () => {
             </button>
             {role === "admin" ||
               (role === "teacher" && (
-                // <FormModal table="assignment" type="create" />
-                <span></span>
+                <FormModal table="assignment" type="create" />
               ))}
           </div>
         </div>
